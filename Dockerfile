@@ -1,5 +1,11 @@
-FROM python:2
+FROM gliderlabs/alpine:3.3
 
-RUN pip install awscli
+RUN apk add --update \
+    python \
+    python-dev \
+    py-pip \
+    build-base \
+ && pip install awscli \
+ && rm -rf /var/cache/apk/*
 
 CMD ["bash"]
