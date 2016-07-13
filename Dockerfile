@@ -1,4 +1,6 @@
-FROM alpine:3.3
+FROM alpine:3.4
+
+MAINTAINER WebOps <webops_team@pebble.com>
 
 RUN apk --update add \
     python \
